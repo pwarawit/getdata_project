@@ -3,15 +3,6 @@ run_analysis <- function(){
     # Written by PanaEk Warawit as part of Getting & Cleaning Data 
     # class project on Jun 20, 2014
     
-    # Check for folders & files exists in current working directory
-    # Read all the 6 data files and 2 reference file into data objects
-    #
-    #
-    #
-    
-    # Check for folders & files exists in current working directory
-    # - To be completed -
-    
     # Read all the 6 data files into data objects
     y_test <- read.table("./test/y_test.txt")
     x_test <- read.table("./test/X_test.txt")

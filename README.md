@@ -155,7 +155,24 @@ This step rename all the column names in *output* dataframe with these rules:
 * if column names contains parentheses, remove parenthese while keep other part the same. This is basically replacing parentheses with zero-lenght string.
 * if column names contains dash (-), replace it with a dot (.)
 This step uses gsub function applys to names of *output* dataframe.
-10. Write output.csv file
-11. Calculate average output
-12. Rename column names of the average output
-13. Write avg_output.csv file
+
+#### 10. Write output.csv file
+At this point, the *output* dataframe is ready to export to file in your local hard drive. This step use *write.table* function to create **output.csv** file in the current working directory. 
+The output format is CSV with first row as column heading and comma as sperator and no quotes. 
+
+#### 11. Calculate average output
+This step takes *output* data frame and calculate the average of all the measures by each subject and each activity, according to point number 5 in project specification. 
+This step requires to load library of *reshape2*.
+The approach is to first melt the *output* dataframe to become a tall dataframe with SubjectID and Activity as combined id and the rest of columns as variables. The result are store in the object *output_melt*. 
+After that, use dcast function to cast the output_melt object while applying *mean* function to calculate the average. The final result is store in *avg_output* dataframe.
+
+#### 12. Rename column names of the average output
+The column names of measures in *avg_output* still inherit from *output* dataframe, eventhough the data itself has been averaged. So to make the column name really matches what it really is, this step add the **Avg.** into all the measures name of the avg_output dataframe. 
+
+#### 13. Write avg_output.csv file
+Now *avg_output* is in the desired format. This step use write.table function to export the content of *avg_output* to local file name **avg_output.csv** in the current working directory. 
+The output format is CSV with first row as column heading and comma as sperator and no quotes. 
+
+#### 14. Return avg_output object
+The last step is to return the avg_output data frame as a result of run_analysis function.
+
