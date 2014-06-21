@@ -21,18 +21,25 @@ Source Data
 --------------
 You can download the source data from [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). Unzip the content into your working directory. The run_analysis.R script expects to have these files & directory structure under your working directory.
 
-| Directory	| File Name 	|
-|---		| ---		|
-| . (working directory)	|	activity_labels.txt	|
-| . (working directory) |	features.txt		|
-| ./train		|  y_train.txt	|
-| ./train		|  X_train.txt	|
-| ./train		|  subject_train.txt 	|
-| ./test		|  y_test.txt	|
-| ./test		| y_test.txt 	|
-| ./test		| suject_test.txt |
+| Directory	| File Name 	| Description	|
+|---		| ---		|---	|
+| . (working directory)	|	activity_labels.txt	| Contains the mapping between numeral activity code (1, 2,...) and actual activity description like WALKING. |
+| . (working directory) |	features.txt		| Contains the list of all 561 features or measures presence in X data file. |
+| ./train		|  y_train.txt	| Contains the activity id for train data set |
+| ./train		|  X_train.txt	| Contains the measures for train data set |
+| ./train		|  subject_train.txt 	| Contains the subject id for train data set | 
+| ./test		|  y_test.txt	| Contains the activity id for test data set |
+| ./test		| X_test.txt 	| Contains the measures for test data set |
+| ./test		| suject_test.txt | Contains the subject id for test data set |
 
 The content of zip file have more files and folders, but those are not required for run_analysis.R to perform. 
+
+### Test & Train data set
+The whole HAR study program use 30 people volunteer to perform the experiments. These individual are refered to as "subject". These subjects are devided into 'test' group and 'train' group. This result in 2 similar data sets. run_analysis.R combines test data set and train dat set together. 
+
+### Features
+The term features has similar meaning as measures, thus it is being used interchangably. Details about features collected and pre-processed from HAR is described in the file "feature_info.txt" which is part of the source data zip file. 
+The complete set of features contains 561 items and it list in this **features.txt** file. The order of features appears in features.txt will corresponding to the order of columns in each line of the **X_test.txt** or **X_train.txt** files. 
 
 Output Data
 -----------
