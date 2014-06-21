@@ -1,5 +1,3 @@
-README.md
-=========
 This document is part of project work for "Getting & Cleaning Data" class offered by Coursera. 
 Written by PanaEk Warawit on June 20, 2014. 
 
@@ -39,9 +37,14 @@ The content of zip file have more files and folders, but those are not required 
 Output Data
 -----------
 The script run_analysis.R generates 2 output text files in your working directory.
+
 | File Name	| Description	|
 |---		|---		|
-| output.csv	| Output details with data 	|
-| avg_output.csv	| Average data output	|
+| output.csv	| Detail combined data between train group and test group, selected only mean and standard deviation measures	| 
+| avg_output.csv	| Aggregated data from detail combined data for average by subject and by activity for each measure	|
 
+More detail explaination of output.csv and avg_output.csv data can be found in the CodeBook.
+
+run_analysis.R
+--------------
 
