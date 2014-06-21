@@ -7,25 +7,31 @@ Project Location: [github.com/pwarawit/getdata_project](https://github.com/pwara
 
 Overview
 ----------
+This project aims to prepare a tidy data set from raw data called [Human Activity Recognition Using Smartphones Data Set](http:///archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). Using R Programming language as data preparation tool.
 This document describes details of the data output files created by run_analysis.R function. 
 
 | File Name	| Description	|
-|---		|---		|
+|:---		|:---		|
 | avg_output.csv	| Aggregated data from detail combined data for average by subject and by activity for each measure	|
 | output.csv	| Detail combined data between train group and test group, selected only mean and standard deviation measures	| 
 
 avg_output.csv
 --------------
+* Text file, comma-separated values
+* First line contains column names
+* No quotes
+* All the measures are averaged by subject and by activity
+
 | Column Name | Description |
-|---	|---	|
-|    SubjectID    |	|
-|    Activity    |	|
-|    Avg.tBodyAcc.mean.X    |	|
-|    Avg.tBodyAcc.mean.Y    |	|
-|    Avg.tBodyAcc.mean.Z    |	|
-|    Avg.tBodyAcc.std.X    |	|
-|    Avg.tBodyAcc.std.Y    |	|
-|    Avg.tBodyAcc.std.Z    |	|
+:---	|:---	|
+|    SubjectID    | An integer range from 1-30 representing individual person participate in the study.	|
+|    Activity    | A text field describing activity that the subject perform. There are 6 possible values (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) 	|
+|    Avg.tBodyAcc.mean.X    | Average of mean of time-domain body acceleration along X-axis	|
+|    Avg.tBodyAcc.mean.Y    | Average of mean of time-domain body acceleration along Y-axis	|
+|    Avg.tBodyAcc.mean.Z    | Average of mean of time-domain body acceleration along Z-axis	|
+|    Avg.tBodyAcc.std.X    | Average of standard deviation of time-domain body acceleration along X-axis	|
+|    Avg.tBodyAcc.std.Y    | Average of standard deviation of time-domain body acceleration along Y-axis	|
+|    Avg.tBodyAcc.std.Z    | Average of standard deviation of time-domain body acceleration along Z-axis	|
 |    Avg.tGravityAcc.mean.X    |	|
 |    Avg.tGravityAcc.mean.Y    |	|
 |    Avg.tGravityAcc.mean.Z    |	|
