@@ -3,7 +3,7 @@ Written by PanaEk Warawit on June 20, 2014.
 
 Project Location: [github.com/pwarawit/getdata_project](https://github.com/pwarawit/getdata_project/)
 
-Objectives
+Overview
 ----------
 This project aims to prepare a tidy data set from raw data called [Human Activity Recognition Using Smartphones Data Set](http:///archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). Using R Programming language as data preparation tool.
 
@@ -47,4 +47,26 @@ More detail explaination of output.csv and avg_output.csv data can be found in t
 
 run_analysis.R
 --------------
+### Parameters
+run_analysis does not require any parameter. However, it expects the source data to be available in the working directory according to detail in source data above.
+### Return 
+run_analysis returns a data frame object that corresponding to the avg_output.csv structure. 
+### Output
+run_analysis writes 2 csv text files into your working directory, see more detail on output data section above.
+### High level program flow
+1. Read data files into data objects
+2. Rename all the columns
+3. Select only the features (measures) contains either means() or std()
+4. Subsetting the main data file with selected measures
+5. Combine X data and Y data together
+6. Combine test data set and train data set
+7. Replace activity code with activity description
+8. Sorting and rearrange the columns
+9. Rename coloumn names
+10. Write output.csv file
+11. Calculate average output
+12. Rename column names of the average output
+13. Write avg_output.csv file
+14. Return avg_output object
+
 
